@@ -1,0 +1,2 @@
+The vulnerability is in the fact that there isnt a limitation on the size of the message received and read from the client while buf size is limited to 1024.
+I sent a message with size of 2048 followed by 2048 bytes. this caused a buffer overflow.

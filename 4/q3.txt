@@ -1,0 +1,4 @@
+first I encoded every non ascii byte in the raw shellcode with 0xff
+I saved the indices of those bytes . then I build a decoder 
+according to these indices I was able to know where to xor the bytes and increment eax.
+I'm sorry for the lame explanation. the code is heavily documented :)

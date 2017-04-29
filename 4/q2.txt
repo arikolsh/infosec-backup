@@ -1,0 +1,4 @@
+I made a minimalistic tcp client to connect to the c&c server. 
+Converted it to assembly using gdb. changed all of the addresses to 
+library functions according to the binary of the server. 
+in q2 i added a maximal initial padding of nops followed with the shell code and then the return address. 
