@@ -1,0 +1,4 @@
+we put the return address to be the address for system call followed by the arguments:
+- the address of exit call which we found in libc
+- the address of the string '/bin/sh' which we found in libc
+- the exit status with 0x42

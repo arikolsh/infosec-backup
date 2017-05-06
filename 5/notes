@@ -1,0 +1,48 @@
+\\--- To run the program with the core dump file
+sudo gdb sudo.c core
+
+x/32x ($esp-64)
+
+
+\\--- this section of the memory is executable
+
+0xb7c39750 - 0xb7d6504d is .text in /lib/i386-linux-gnu/libc.so.6
+
+\\--- this section is where initialized constant data
+
+0xb7d662c0 - 0xb7d86e74 is .rodata in /lib/i386-linux-gnu/libc.so.6
+
+\\--- To dump the binary contents of the memory at a certain range, use
+
+dump binary memory {path_to_dump_file} {start_addr} {end_addr}
+
+
+
+0x080489c8 - 0x08048a52 is .rodata
+
+0xb7d662c0 - 0xb7d86e74 is .rodata in /lib/i386-linux-gnu/libc.so.6
+
+found in 0xb7d7d82b
+
+\\--- auth is in:
+0x0804A054
+buffer = [... <pop eax; ret> <0x0804A054> <xor ecx, ecx; ret> <inc ecx; ret> <mov [eax], ecx; ret> <return address after checkpassword>]        
+
+\\--- return from check password is 
+0x08048867
+
+\\--- debug gdb
+
+sudo gdb python core -ex "b *<break point addr>" -ex "r" -ex "layout asm" -ex "layout regs" --args python <q3 for example>.py
+
+\\--- address of puts
+0xb7c81ca0
+
+main: 
+0x8048877
+sudo gdb python core -ex "b *0x8048877" -ex "r" -ex "layout asm" -ex "layout regs" --args python q4.py
+check password:
+0x080487a4
+
+0x08048865
+sudo gdb python core -ex "b *0x08048865" -ex "r" -ex "layout asm" -ex "layout regs" --args python q4.py

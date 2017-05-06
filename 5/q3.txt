@@ -1,0 +1,12 @@
+I implented in the stack addresses of the following instructions: 
+<the return address from check-password function>
+mov [A], B; ret;
+int B; ret; <= here eax will hold 1
+xor B,B; ret;
+<the address of the global variable auth>
+pop A; ret; 
+buf[n-1]
+...
+buf[0]
+
+A and B are suitable registers I found using the search module

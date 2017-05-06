@@ -1,0 +1,1 @@
+i sent a password of length 100. the buffer that stores the password in sudo.c is limited to 65 so the program crashed on account of a buffer overflow that ran over the return address.

