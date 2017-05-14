@@ -1,0 +1,2 @@
+found the static address of check_if_password using gdb and setting a break point in main.
+there I implanted the function 'xor eax,eax' which basically does nothing but set the eax to zero.

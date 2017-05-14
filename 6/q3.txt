@@ -1,0 +1,1 @@
+I found the pointer to which the plt jumps and changed it to is_directory's address which in any case returns 0 and its argument matches check_if_password.

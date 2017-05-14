@@ -1,0 +1,2 @@
+I sent a command using grep that took the line containing the pid the corresponds with antivirus process.
+I parsed it to retrieve only the pid and send the payload to kill it.

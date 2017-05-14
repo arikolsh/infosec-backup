@@ -1,0 +1,1 @@
+use ptrace to inspect the register eax right before a system call. if it is 3 which means its a read syscall then change edx which stores the length of the path to 0 and set the registers using ptrace. do this in a loop until process killed

@@ -1,0 +1,6 @@
+0xb7fd3750 - check_if_virus
+0xb7fd3759 - got in check_if_virus
+
+gdb --args ./binaries/antivirus .
+
+0x080485f0 - plt check_if_p
