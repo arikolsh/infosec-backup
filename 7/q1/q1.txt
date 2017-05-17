@@ -1,0 +1,2 @@
+my expolit is an execution of a bash script 'echo hacked'.
+this will work because the run script does eval on this string and execute its value.

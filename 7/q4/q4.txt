@@ -1,0 +1,2 @@
+i overloaded the original json in the example with another arbitrary key that contains a dictionary with the key 'command' and a value of 'echo hacked'.
+the reason this works is because the verify takes the value in the 'command' key of the json while the execution of the command searches the command using regular expression. so in the execution the first '[command:*]' it will find would be the one in the smaller dictionary I implanted.

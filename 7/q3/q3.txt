@@ -1,0 +1,1 @@
+i put the two ':'s at the start of the string that way 'password_end' and 'username_end' will result to 0 and 1 respectively. that way we effectively comaparing empty strings in validate_script() which will of course be equal.

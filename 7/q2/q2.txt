@@ -1,0 +1,1 @@
+pickle allows arbitrary objects to declare how they should be pickled by defining a __reduce__ method. so we created an object called Exploit that implements this method by specifyning a callable which is os.system and a tuple of arguments for this callable which is ('echo hacked',).
