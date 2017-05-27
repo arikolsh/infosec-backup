@@ -1,0 +1,1 @@
+using scapy i check that the packet's tcp destination port is 80 which means it is transfered by HTTP. and I checked the host is infosec's site. to find the password and username i checked first if it is an HTTP POST LOGIN request and then parsed the username and password according to the right properties.

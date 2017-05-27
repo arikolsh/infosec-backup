@@ -1,0 +1,2 @@
+i constructed a new packet using. in the ip layer i took the original src and dst and switched them to be dst and src. in the tcp layer i took the original ports and switched their roles like in the ip layer. in addition, i put the "FIN-ACK" flag because we want to close the connection.
+furthermore, the seq property will be the ack of the original packet and the ack will be the length so far plus the length of the last payload according to the way the tcp works. 
