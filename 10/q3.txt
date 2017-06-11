@@ -1,0 +1,2 @@
+when uploading the image i implanted a js code in the 'onload' attribue. every user that sees the image for the first time, when the image is fully loaded
+the js code will store a boolean variable in the local storage of the dom. the second time the user sees the image the js will check if the variable is stored and its value is true and when it is, it will remove the image element from the dom.  

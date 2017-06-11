@@ -1,0 +1,2 @@
+the server checks for an existence of a cookie with the username & password on load.
+so if we set the cookie of the dom to be 'edward' encoded in base64 (because the server decodes it in base64) then after a refresh the server will redirect us to the actual site because of the cookie we set. the reason 'edward' is suffice is because there is no password in the db record of edward. 

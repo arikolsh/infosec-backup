@@ -1,0 +1,1 @@
+i performed sql injection. when sending a '/rename' message there is an execution of an sql script. there i implant my own sql script to update the password of bob as shown in class. the injection occurs in the parameter that holds the 'full name'.

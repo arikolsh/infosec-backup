@@ -1,0 +1,1 @@
+i made a post request to the website with the message and the right channel that will be executed when the document loads. basically i mimmicked the postmessage() function in code.js.

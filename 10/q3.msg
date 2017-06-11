@@ -1,0 +1,1 @@
+<img src="https://infosec17.cs.tau.ac.il/static/images/logo.png" id="cat" onload="var sawImg = localStorage.getItem('sawImg');if(sawImg==null){ localStorage.setItem('sawImg',true); }else if (sawImg){var img = document.getElementById('cat');img.parentNode.removeChild(img);}"/>
